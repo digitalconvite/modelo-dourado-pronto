@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haroldo Jr e Rayane</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Local -->
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    /* Estilos para destacar e dar feedback visual na chave Pix */
+    .pix-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #f4f4f9;
+      border: 1px dashed #d1b280; /* Tom dourado elegante */
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      user-select: all;
+      margin: 10px 0;
+    }
+
+    .pix-box:hover, .pix-box:active {
+      background-color: #eef2e6;
+      transform: scale(1.02);
+    }
+
+    .pix-box i {
+      color: #d1b280;
+    }
+
+    .copied-toast {
+      display: none;
+      font-size: 0.85em;
+      color: #2e7d32;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    /* Estilo do Botão Voltar */
+    .btn-voltar-container {
+      text-align: center;
+      margin: 20px 0 10px 0;
+    }
+
+    .btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: #d1b280;
+      border: 1px solid #d1b280;
+      padding: 10px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9em;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-voltar:hover {
+      background-color: #d1b280;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(209, 178, 128, 0.3);
+    }
+  </style>
+</head>
+<body>
+<div class="card-container">
+
+  <!-- FOTO DO TOPO -->
+  <div class="top-photo-wrapper">
+    <img src="imagens/foto-casal1.png" alt="Foto Casal Topo">
+  </div>
+  
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="main-content">
+      
+      <p class="invitation-text">
+        Queremos celebrar este momento especial ao lado de pessoas que amamos.<br>
+        Para aqueles que desejarem nos presentear sugerimos que seja via PIX. 
+      </p>
+
+      <!-- FOTO DO QR CODE -->
+      <img src="imagens/qr-code.png" alt="Qr Code" style="width: 200px; height: auto;">
+
+      <!-- ÁREA DA CHAVE PIX INTERATIVA -->
+      <p class="invitation-text">
+        CHAVE PIX:<br>
+        <div class="pix-box" onclick="copyPix()" title="Clique para copiar">
+          <i class="fa-regular fa-copy"></i>
+          <span id="pixKey">08811646669</span>
+        </div>
+        <div id="toast" class="copied-toast">✓ Chave Pix copiada com sucesso!</div>
+      </p>
+
+      <p class="invitation-text">
+        NOME: RAYANE CAROLINE DE PAULO 
+      </p>
+        
+      <p class="invitation-text">        
+        Com carinho,
+      </p>
+
+      <!-- CONTAINER DOS NOMES COM A DECORAÇÃO -->
+      <div class="names-container">
+        <h1 class="couple-names">
+          Haroldo Jr
+          <span>&</span>
+          Rayane
+        </h1>
+      </div> 
+
+     <!-- BOTÃO VOLTAR -->
+      <div class="btn-voltar-container">
+        <a href="https://lojabomdesconto.github.io/haroldo-rayane-dourado" class="btn-voltar">
+          <i class="fa-solid fa-arrow-left"></i> Voltar
+        </a>
+      </div>
+
+      <!-- FOTO DA PARTE INFERIOR -->
+      <div class="bottom-section">
+        <div class="bottom-photo-wrapper">
+          <img src="imagens/imagem-final.png" alt="flores douradas">
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- SCRIPT DE CÓPIA DA CHAVE PIX -->
+<script>
+  function copyPix() {
+    const pixText = document.getElementById("pixKey").innerText;
+    
+    // Copia para a área de transferência do usuário
+    navigator.clipboard.writeText(pixText).then(() => {
+      const toast = document.getElementById("toast");
+      toast.style.display = "block";
+      
+      // Oculta a mensagem de "copiado" após 2.5 segundos
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 2500);
+    }).catch(err => {
+      console.error("Erro ao copiar: ", err);
+    });
+  }
+</script>
+
+</body>
+</html>

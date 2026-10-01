@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
 
       // Digite aqui o número do WhatsApp que vai receber os dados (DDD + número)
-      const numeroWhatsapp = "553492995097"; 
+      const numeroWhatsapp = "551199999999"; 
 
       const nome = document.getElementById('nome').value;
       const celebracao = document.getElementById('presencaCelebracao').value;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const acompanhantes = document.getElementById('acompanhantes').value;
 
       // Formatação da mensagem para o WhatsApp
-      let mensagem = `*Confirmação de Presença - Casamento Haroldo Jr & Rayane*\n\n`;
+      let mensagem = `*Confirmação de Presença - Casamento Noivo & Noiva*\n\n`;
       mensagem += `👤 *Nome:* ${nome}\n`;
       mensagem += `⛪ *Celebração:* ${celebracao}\n`;
       mensagem += `🥂 *Recepção:* ${recepcao}\n`;
@@ -104,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('touchstart', startAudioOnInteraction);
   }
   
-  // Data do Casamento: 12 de Outubro de 2026 às 11:00
-const targetDate = new Date("October 12, 2026 11:00:00").getTime();
+  // Data do Casamento: 12 de Outubro de 2027 às 11:00
+const targetDate = new Date("October 12, 2027 11:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();

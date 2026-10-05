@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
 
       // Digite aqui o número do WhatsApp que vai receber os dados (DDD + número)
-      const numeroWhatsapp = "551199999999"; 
+      const numeroWhatsapp = "5511973968625"; 
 
       const nome = document.getElementById('nome').value;
       const celebracao = document.getElementById('presencaCelebracao').value;
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
           musicIcon.className = 'fa-solid fa-pause';
         }).catch((error) => {
           console.error("Erro ao tocar áudio:", error);
-          alert("Não foi possível carregar a música. Verifique se o arquivo 'audio/all-of-me.mp3' está na pasta correta.");
+          alert("Não foi possível carregar a música. Verifique se o arquivo 'audio/musica.mp3' está na pasta correta.");
         });
       } else {
         bgMusic.pause();

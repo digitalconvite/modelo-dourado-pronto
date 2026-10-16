@@ -311,16 +311,12 @@ html, body {
 }
 
 .waiting-text {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
   font-family: var(--font-cursive);
-  font-size: 3.2rem;
+  font-size: 3.8rem;
   color: var(--primary-color);
-  z-index: 2;
-  text-shadow: 0 0 10px rgba(255,255,255,0.8);
-  line-height: 1;
+  line-height: 1.1;
+  margin: 10px 0 20px;
+  font-weight: normal;
 }
 
 .waiting-text span {

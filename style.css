@@ -108,6 +108,16 @@ html, body {
   margin: -5px 0;
 }
 
+.versiculo-biblico {
+  font-size: 0.5rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  max-width: 320px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
 .invitation-text {
   font-size: 0.8rem;
   color: var(--text-gold);

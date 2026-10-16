@@ -109,7 +109,7 @@ html, body {
 }
 
 .versiculo-biblico {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   color: var(--text-gold);
   letter-spacing: 1.5px;
   line-height: 1.8;
@@ -126,10 +126,6 @@ html, body {
   max-width: 320px;
   text-transform: uppercase;
   margin-bottom: 25px;
-}
-/* Espaço menor entre o versículo e o texto do convite */
-.invitation-text + .invitation-text {
-  margin-top: -10px; /* Reduz o espaço excessivo entre os dois parágrafos */
 }
 
 .information-extra {
